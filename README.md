@@ -67,7 +67,10 @@ client user {
   
   
 # 数据持久化
-docker run 命令
+待解决 ，目前发现持久化后无法添加用户
+
+
+~docker run 命令~
 
 ```bash
 docker run -d --name freeradius -h freeradius -p 1812:1812/udp --restart unless-stopped \
@@ -79,7 +82,7 @@ docker run -d --name freeradius -h freeradius -p 1812:1812/udp --restart unless-
   id404/freeradius
 ```
 
-docker compose文件内容
+~docker compose文件内容~
 ```
 version: '3'
 services:
