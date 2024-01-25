@@ -1,0 +1,13 @@
+#
+# /etc/pam.d/radiusd - PAM configuration for FreeRADIUS
+#
+
+# We fall back to the system default in /etc/pam.d/common-*
+# 
+        
+#@include common-auth
+#@include common-account
+#@include common-password
+#@include common-session
+auth requisite pam_google_authenticator.so forward_pass
+auth required pam_unix.so use_first_pass

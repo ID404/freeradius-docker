@@ -1,0 +1,17 @@
+version: '3'
+services:
+  freeradius:
+    image: id404/freeradius
+    container_name: freeradius
+    hostname: freeradius
+    ports:
+      - "1812:1812/udp"
+    restart: unless-stopped
+    volumes:
+      - ./data/config/clients.conf:/etc/freeradius/3.0/clients.conf
+#      - ./data/userdata/home:/home:rw
+#      - ./data/userdata/passwd:/etc/passwd:rw
+#      - ./data/userdata/shadow:/etc/shadow:rw
+#      - ./data/userdata/group:/etc/group:rw
+
+
